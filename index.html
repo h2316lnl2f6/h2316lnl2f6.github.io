@@ -1,0 +1,1155 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>今日看料_美好生活影像_从今日开始的生活方式视频品牌</title>
+<meta name="description" content="今日看料官方网站，专注美好生活影像与生活方式的视频品牌，以原创高清内容记录日常、分享经验、连接创作者，让美好生活从今日开始。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f3a2d'/%3E%3Ccircle cx='32' cy='32' r='15' fill='none' stroke='%23e8b84b' stroke-width='4'/%3E%3Cpath d='M28 24 L44 32 L28 40 Z' fill='%23e8b84b'/%3E%3C/svg%3E">
+<style>
+:root{
+  --jrl-ink:#1f3a2d;
+  --jrl-ink-soft:#33564a;
+  --jrl-leaf:#4a7c59;
+  --jrl-moss:#7fa47a;
+  --jrl-clay:#c9855a;
+  --jrl-amber:#e8b84b;
+  --jrl-cream:#f6f3ea;
+  --jrl-paper:#fffdf7;
+  --jrl-line:#dfd9c8;
+  --jrl-muted:#6f7a70;
+  --jrl-shadow:0 10px 30px rgba(31,58,45,.10);
+  --jrl-radius:16px;
+  --jrl-head-h:112px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color:var(--jrl-ink);
+  background:var(--jrl-cream);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;}
+ul,ol{margin:0;padding:0;list-style:none;}
+h1,h2,h3,h4{margin:0;line-height:1.3;}
+p{margin:0 0 1em;}
+.jrl-wrap{width:min(1180px,92vw);margin:0 auto;}
+.jrl-section{padding:56px 0;}
+.jrl-section-title{font-size:clamp(1.4rem,2.6vw,1.9rem);letter-spacing:.02em;margin-bottom:8px;}
+.jrl-section-title .jrl-accent{color:var(--jrl-clay);}
+.jrl-section-sub{color:var(--jrl-muted);font-size:.95rem;margin-bottom:28px;max-width:760px;}
+.jrl-eyebrow{display:inline-block;font-size:.78rem;letter-spacing:.22em;color:var(--jrl-leaf);text-transform:uppercase;margin-bottom:10px;}
+.jrl-tag{display:inline-block;padding:2px 10px;border-radius:999px;font-size:.72rem;background:rgba(74,124,89,.12);color:var(--jrl-ink-soft);margin:0 6px 6px 0;white-space:nowrap;}
+.jrl-tag--amber{background:rgba(232,184,75,.22);color:#7a5a10;}
+.jrl-tag--clay{background:rgba(201,133,90,.18);color:#8c4a24;}
+.jrl-btn{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:999px;border:1px solid transparent;font-size:.92rem;transition:transform .18s ease, box-shadow .18s ease, background .18s ease;}
+.jrl-btn--primary{background:var(--jrl-ink);color:#f8f4e6;}
+.jrl-btn--primary:hover{background:var(--jrl-ink-soft);transform:translateY(-2px);box-shadow:var(--jrl-shadow);}
+.jrl-btn--ghost{border-color:var(--jrl-ink);color:var(--jrl-ink);background:transparent;}
+.jrl-btn--ghost:hover{background:rgba(31,58,45,.07);transform:translateY(-2px);}
+.jrl-btn--amber{background:var(--jrl-amber);color:#3d2c05;}
+.jrl-btn--amber:hover{background:#f0c766;transform:translateY(-2px);}
+
+/* ============ S1 吸顶公告 + 页头 ============ */
+.jrl-sticky-shell{position:sticky;top:0;z-index:120;}
+.jrl-announce{
+  background:linear-gradient(90deg,var(--jrl-ink),#2c5142 60%,var(--jrl-leaf));
+  color:#f2eddd;font-size:.84rem;
+}
+.jrl-announce-inner{display:flex;align-items:center;gap:14px;padding:8px 0;flex-wrap:wrap;}
+.jrl-announce-label{flex:0 0 auto;background:var(--jrl-amber);color:#3d2c05;font-weight:700;font-size:.72rem;letter-spacing:.1em;padding:2px 10px;border-radius:4px;}
+.jrl-announce-track{flex:1 1 320px;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.jrl-announce-track b{color:var(--jrl-amber);font-weight:600;}
+.jrl-announce-link{flex:0 0 auto;color:#f2eddd;border-bottom:1px dashed rgba(242,237,221,.55);font-size:.8rem;}
+.jrl-header{background:rgba(246,243,234,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--jrl-line);}
+.jrl-header-inner{display:flex;align-items:center;gap:22px;padding:14px 0;}
+.jrl-brand{display:flex;align-items:center;gap:12px;flex:0 0 auto;}
+.jrl-brand-mark{width:44px;height:44px;border-radius:13px;background:var(--jrl-ink);display:grid;place-items:center;flex:0 0 auto;}
+.jrl-brand-text{display:flex;flex-direction:column;line-height:1.15;}
+.jrl-brand-name{font-size:1.12rem;font-weight:800;letter-spacing:.04em;}
+.jrl-brand-slogan{font-size:.7rem;color:var(--jrl-muted);letter-spacing:.14em;}
+.jrl-nav{margin-left:auto;display:flex;align-items:center;gap:4px;}
+.jrl-nav a{padding:8px 13px;border-radius:999px;font-size:.9rem;color:var(--jrl-ink-soft);transition:background .16s,color .16s;}
+.jrl-nav a:hover,.jrl-nav a.is-active{background:rgba(74,124,89,.13);color:var(--jrl-ink);}
+.jrl-search{display:flex;align-items:center;gap:6px;border:1px solid var(--jrl-line);background:var(--jrl-paper);border-radius:999px;padding:5px 6px 5px 14px;min-width:210px;}
+.jrl-search input{border:0;outline:0;background:transparent;font-size:.86rem;width:100%;color:var(--jrl-ink);}
+.jrl-search-btn{border:0;background:var(--jrl-ink);color:#f6f1e2;border-radius:999px;width:30px;height:30px;display:grid;place-items:center;flex:0 0 auto;}
+.jrl-search-feedback{font-size:.78rem;color:var(--jrl-clay);min-height:0;transition:.2s;}
+.jrl-nav-toggle{display:none;border:1px solid var(--jrl-line);background:var(--jrl-paper);border-radius:10px;width:42px;height:40px;align-items:center;justify-content:center;}
+.jrl-mobile-nav{display:none;border-top:1px solid var(--jrl-line);padding:10px 0 16px;}
+.jrl-mobile-nav.is-open{display:block;}
+.jrl-mobile-nav a{display:block;padding:11px 8px;border-radius:10px;font-size:.95rem;}
+.jrl-mobile-nav a:hover{background:rgba(74,124,89,.1);}
+
+/* ============ S2 首屏 居中大标题 + 宽幅主视觉 ============ */
+.jrl-hero{padding:44px 0 20px;position:relative;overflow:hidden;}
+.jrl-hero::before{
+  content:"";position:absolute;inset:auto -10% 55% auto;width:420px;height:420px;border-radius:50%;
+  background:radial-gradient(circle,rgba(232,184,75,.28),transparent 68%);pointer-events:none;
+}
+.jrl-hero-head{text-align:center;max-width:900px;margin:0 auto 26px;position:relative;}
+.jrl-hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(31,58,45,.08);border:1px solid rgba(31,58,45,.16);color:var(--jrl-ink-soft);border-radius:999px;padding:6px 16px;font-size:.8rem;letter-spacing:.08em;margin-bottom:18px;}
+.jrl-hero-badge i{width:7px;height:7px;border-radius:50%;background:var(--jrl-leaf);display:inline-block;}
+.jrl-hero h1{font-size:clamp(2rem,5.2vw,3.5rem);font-weight:900;letter-spacing:.02em;line-height:1.16;}
+.jrl-hero h1 em{font-style:normal;color:var(--jrl-clay);}
+.jrl-hero-lead{margin:18px auto 0;max-width:720px;color:var(--jrl-ink-soft);font-size:1.02rem;}
+.jrl-hero-visual{position:relative;border-radius:26px;overflow:hidden;box-shadow:0 24px 60px rgba(31,58,45,.20);border:1px solid rgba(31,58,45,.12);}
+.jrl-hero-visual img{width:100%;aspect-ratio:21/8;object-fit:cover;}
+.jrl-hero-visual-caption{position:absolute;left:0;right:0;bottom:0;padding:22px 28px;background:linear-gradient(to top,rgba(18,36,27,.86),rgba(18,36,27,.32) 60%,transparent);color:#f4efdf;display:flex;flex-wrap:wrap;gap:12px 26px;align-items:flex-end;justify-content:space-between;}
+.jrl-hero-visual-caption h2{font-size:1.1rem;font-weight:700;color:#fff8e6;}
+.jrl-hero-visual-caption p{margin:4px 0 0;font-size:.86rem;color:rgba(244,239,223,.85);max-width:560px;}
+.jrl-hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:26px;}
+.jrl-stat{background:var(--jrl-paper);border:1px solid var(--jrl-line);border-radius:var(--jrl-radius);padding:20px 22px;position:relative;overflow:hidden;}
+.jrl-stat::after{content:"";position:absolute;right:-26px;top:-26px;width:76px;height:76px;border-radius:50%;background:rgba(74,124,89,.10);}
+.jrl-stat dt{font-size:.78rem;letter-spacing:.12em;color:var(--jrl-muted);}
+.jrl-stat dd{margin:6px 0 0;font-size:1.65rem;font-weight:800;color:var(--jrl-ink);}
+.jrl-stat dd small{font-size:.8rem;font-weight:500;color:var(--jrl-muted);margin-left:4px;}
+.jrl-hero-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:26px;}
+.jrl-hero-about{max-width:880px;margin:34px auto 0;text-align:center;color:var(--jrl-ink-soft);font-size:.98rem;background:rgba(255,253,247,.7);border:1px dashed var(--jrl-line);border-radius:18px;padding:24px 26px;}
+.jrl-hero-about strong{color:var(--jrl-ink);}
+
+/* ============ S3 焦点 + 视频条目 ============ */
+.jrl-focus-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:26px;}
+.jrl-focus-card{background:var(--jrl-paper);border:1px solid var(--jrl-line);border-radius:22px;overflow:hidden;box-shadow:var(--jrl-shadow);display:flex;flex-direction:column;}
+.jrl-focus-cover{position:relative;}
+.jrl-focus-cover img{width:100%;aspect-ratio:16/9;object-fit:cover;}
+.jrl-play-badge{position:absolute;left:18px;top:18px;background:rgba(18,36,27,.72);color:#fff4d8;font-size:.74rem;letter-spacing:.1em;padding:4px 12px;border-radius:999px;display:inline-flex;align-items:center;gap:6px;}
+.jrl-focus-body{padding:22px 24px 24px;}
+.jrl-focus-body h3{font-size:1.28rem;margin-bottom:10px;}
+.jrl-focus-body p{font-size:.94rem;color:var(--jrl-ink-soft);margin-bottom:14px;}
+.jrl-meta-row{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;font-size:.8rem;color:var(--jrl-muted);}
+.jrl-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;}
+.jrl-act{border:1px solid var(--jrl-line);background:var(--jrl-paper);border-radius:999px;padding:6px 14px;font-size:.82rem;color:var(--jrl-ink-soft);display:inline-flex;align-items:center;gap:7px;transition:.16s;}
+.jrl-act:hover{border-color:var(--jrl-leaf);background:rgba(74,124,89,.08);}
+.jrl-act.is-liked{background:rgba(201,133,90,.16);border-color:var(--jrl-clay);color:#8c4a24;}
+.jrl-act.is-saved{background:rgba(232,184,75,.24);border-color:var(--jrl-amber);color:#7a5a10;}
+.jrl-video-list{display:flex;flex-direction:column;gap:14px;}
+.jrl-video-item{background:var(--jrl-paper);border:1px solid var(--jrl-line);border-radius:16px;padding:16px 18px;transition:transform .18s,box-shadow .18s,border-color .18s;}
+.jrl-video-item:hover{transform:translateY(-3px);box-shadow:var(--jrl-shadow);border-color:var(--jrl-moss);}
+.jrl-video-item h3{font-size:1rem;margin-bottom:6px;}
+.jrl-video-item p{font-size:.84rem;color:var(--jrl-ink-soft);margin-bottom:10px;}
+.jrl-video-mini-meta{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.76rem;color:var(--jrl-muted);}
+.jrl-video-index{display:inline-block;font-size:.72rem;font-weight:700;color:var(--jrl-clay);letter-spacing:.1em;margin-bottom:4px;}
+
+/* ============ 关键词解析 长文 ============ */
+.jrl-essay{background:var(--jrl-paper);border:1px solid var(--jrl-line);border-radius:24px;padding:clamp(24px,4vw,46px);box-shadow:var(--jrl-shadow);}
+.jrl-essay h2{font-size:clamp(1.45rem,2.8vw,2rem);margin-bottom:6px;}
+.jrl-essay-lead{color:var(--jrl-clay);font-weight:600;margin-bottom:22px;}
+.jrl-essay-article{columns:auto;}
+.jrl-essay-article h3{font-size:1.1rem;margin:26px 0 10px;padding-left:14px;position:relative;}
+.jrl-essay-article h3::before{content:"";position:absolute;left:0;top:.35em;width:5px;height:1em;border-radius:3px;background:var(--jrl-amber);}
+.jrl-essay-article p{font-size:.96rem;color:#3b4a40;text-align:justify;}
+.jrl-essay-figure{margin:26px 0 10px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;}
+.jrl-essay-figure figure{margin:0;}
+.jrl-essay-figure img{border-radius:14px;border:1px solid var(--jrl-line);width:100%;aspect-ratio:16/10;object-fit:cover;}
+.jrl-essay-figure figcaption{font-size:.78rem;color:var(--jrl-muted);margin-top:8px;}
+
+/* ============ S4 专题 ============ */
+.jrl-topic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;}
+.jrl-topic{background:var(--jrl-paper);border:1px solid var(--jrl-line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s;}
+.jrl-topic:hover{transform:translateY(-4px);box-shadow:var(--jrl-shadow);}
+.jrl-topic-cover img{width:100%;aspect-ratio:16/9;object-fit:cover;}
+.jrl-topic-body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1 1 auto;}
+.jrl-topic-body h3{font-size:1.08rem;margin-bottom:8px;}
+.jrl-topic-body>p{font-size:.86rem;color:var(--jrl-ink-soft);}
+.jrl-topic-status{font-size:.74rem;color:var(--jrl-leaf);font-weight:600;letter-spacing:.06em;margin-bottom:10px;}
+.jrl-topic-items{margin-top:auto;padding-top:12px;border-top:1px dashed var(--jrl-line);}
+.jrl-topic-items li{font-size:.83rem;color:var(--jrl-ink-soft);padding:5px 0 5px 16px;position:relative;}
+.jrl-topic-items li::before{content:"";position:absolute;left:0;top:.85em;width:6px;height:6px;border-radius:50%;background:var(--jrl-moss);}
+
+/* ============ S5 作者区 双列简介 ============ */
+.jrl-author-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;}
+.jrl-author{display:flex;gap:16px;background:var(--jrl-paper);border:1px solid var(--jrl-line);border-radius:18px;padding:20px;transition:transform .18s,box-shadow .18s;}
+.jrl-author:hover{transform:translateY(-3px);box-shadow:var(--jrl-shadow);}
+.jrl-avatar{width:60px;height:60px;border-radius:50%;flex:0 0 auto;display:grid;place-items:center;font-weight:800;font-size:1.15rem;color:#fff8e6;letter-spacing:.04em;}
+.jrl-avatar--a{background:linear-gradient(135deg,#4a7c59,#7fa47a);}
+.jrl-avatar--b{background:linear-gradient(135deg,#c9855a,#e8b84b);color:#3d2c05;}
+.jrl-avatar--c{background:linear-gradient(135deg,#33564a,#4a7c59);}
+.jrl-avatar--d{background:linear-gradient(135deg,#7a5a10,#c9855a);}
+.jrl-avatar--e{background:linear-gradient(135deg,#2c5142,#c9855a);}
+.jrl-avatar--f{background:linear-gradient(135deg,#7fa47a,#e8b84b);color:#3d2c05;}
+.jrl-author-body{min-width:0;}
+.jrl-author-body h3{font-size:1.02rem;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.jrl-author-role{font-size:.72rem;font-weight:600;color:var(--jrl-clay);background:rgba(201,133,90,.14);border-radius:999px;padding:1px 9px;}
+.jrl-author-nums{display:flex;gap:14px;font-size:.76rem;color:var(--jrl-muted);margin:6px 0 10px;}
+.jrl-author-nums b{color:var(--jrl-ink);font-weight:700;}
+.jrl-author-body p{font-size:.85rem;color:var(--jrl-ink-soft);margin:0;}
+
+/* ============ S6 评价 引用摘录 ============ */
+.jrl-quote-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;}
+.jrl-quote{background:var(--jrl-paper);border-left:4px solid var(--jrl-moss);border-radius:14px;padding:20px 22px;position:relative;box-shadow:0 6px 18px rgba(31,58,45,.06);}
+.jrl-quote::before{content:"“";position:absolute;right:16px;top:2px;font-size:3rem;color:rgba(74,124,89,.18);font-family:Georgia,serif;line-height:1;}
+.jrl-quote p{font-size:.9rem;color:var(--jrl-ink-soft);margin-bottom:12px;}
+.jrl-quote footer{font-size:.78rem;color:var(--jrl-muted);display:flex;align-items:center;gap:8px;}
+.jrl-quote-dot{width:8px;height:8px;border-radius:50%;background:var(--jrl-amber);display:inline-block;}
+
+/* ============ 榜单 紧凑数据 ============ */
+.jrl-board-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;}
+.jrl-board{background:var(--jrl-paper);border:1px solid var(--jrl-line);border-radius:18px;padding:22px;}
+.jrl-board h3{font-size:1rem;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.jrl-board h3 span{font-size:.7rem;font-weight:600;color:var(--jrl-ink-soft);background:rgba(232,184,75,.24);border-radius:999px;padding:1px 9px;}
+.jrl-board li{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px dashed var(--jrl-line);font-size:.85rem;}
+.jrl-board li:last-child{border-bottom:0;}
+.jrl-board .jrl-rank{flex:0 0 auto;width:22px;height:22px;border-radius:7px;display:grid;place-items:center;background:rgba(74,124,89,.12);color:var(--jrl-ink-soft);font-size:.75rem;font-weight:700;}
+.jrl-board .jrl-rank--top{background:var(--jrl-amber);color:#3d2c05;}
+.jrl-board .jrl-board-name{flex:1 1 auto;min-width:0;}
+.jrl-board .jrl-board-name small{display:block;color:var(--jrl-muted);font-size:.74rem;}
+.jrl-board .jrl-board-val{flex:0 0 auto;color:var(--jrl-clay);font-weight:700;font-size:.8rem;}
+
+/* ============ S7 辅助区 ============ */
+.jrl-support-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:start;}
+.jrl-panel{background:var(--jrl-paper);border:1px solid var(--jrl-line);border-radius:20px;padding:24px 26px;}
+.jrl-panel h2{font-size:1.25rem;margin-bottom:6px;}
+.jrl-panel>p.jrl-panel-sub{font-size:.86rem;color:var(--jrl-muted);margin-bottom:16px;}
+.jrl-news li{display:flex;gap:14px;padding:11px 0;border-bottom:1px dashed var(--jrl-line);font-size:.86rem;color:var(--jrl-ink-soft);}
+.jrl-news li:last-child{border-bottom:0;}
+.jrl-news time{flex:0 0 auto;color:var(--jrl-clay);font-weight:700;font-size:.78rem;letter-spacing:.02em;}
+.jrl-partners{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
+.jrl-partner{border:1px solid var(--jrl-line);border-radius:12px;padding:12px 14px;font-size:.85rem;color:var(--jrl-ink-soft);background:rgba(246,243,234,.6);}
+.jrl-faq details{border-bottom:1px dashed var(--jrl-line);padding:6px 0;}
+.jrl-faq summary{cursor:pointer;list-style:none;font-size:.92rem;font-weight:600;padding:12px 26px 12px 0;position:relative;}
+.jrl-faq summary::-webkit-details-marker{display:none;}
+.jrl-faq summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);font-size:1.2rem;color:var(--jrl-leaf);transition:.2s;}
+.jrl-faq details[open] summary::after{content:"–";}
+.jrl-faq details p{font-size:.86rem;color:var(--jrl-ink-soft);padding:0 0 12px;margin:0;}
+.jrl-submit-card{margin-top:22px;background:linear-gradient(135deg,#22412f,#4a7c59);color:#f0ebdb;border-radius:22px;padding:30px 32px;display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;}
+.jrl-submit-card h2{font-size:1.25rem;color:#fff8e6;}
+.jrl-submit-card p{margin:6px 0 0;font-size:.86rem;color:rgba(240,235,219,.85);max-width:560px;}
+
+/* ============ S8 页脚 ============ */
+.jrl-footer{background:var(--jrl-ink);color:#d9d3c2;padding:52px 0 26px;margin-top:20px;}
+.jrl-footer-grid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:26px;}
+.jrl-footer h3{font-size:.92rem;color:#f2eddd;margin-bottom:14px;letter-spacing:.06em;}
+.jrl-footer p{font-size:.84rem;color:rgba(217,211,194,.82);}
+.jrl-footer li{font-size:.84rem;padding:5px 0;color:rgba(217,211,194,.82);}
+.jrl-footer li a:hover{color:var(--jrl-amber);}
+.jrl-footer-bottom{border-top:1px solid rgba(217,211,194,.18);margin-top:34px;padding-top:18px;display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center;justify-content:space-between;font-size:.78rem;color:rgba(217,211,194,.65);}
+.jrl-footer-brand{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.jrl-footer-brand .jrl-brand-mark{background:rgba(255,255,255,.08);}
+
+/* ============ 回到顶部 & Toast ============ */
+.jrl-top{position:fixed;right:22px;bottom:26px;width:46px;height:46px;border-radius:14px;border:0;background:var(--jrl-ink);color:#f8f4e6;display:grid;place-items:center;box-shadow:var(--jrl-shadow);opacity:0;pointer-events:none;transform:translateY(12px);transition:.25s;z-index:130;}
+.jrl-top.is-show{opacity:1;pointer-events:auto;transform:translateY(0);}
+.jrl-toast{position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);background:#22412f;color:#f6f1e2;padding:11px 22px;border-radius:999px;font-size:.86rem;box-shadow:var(--jrl-shadow);opacity:0;pointer-events:none;transition:.25s;z-index:200;}
+.jrl-toast.is-show{opacity:1;transform:translate(-50%,0);}
+.jrl-modal{position:fixed;inset:0;background:rgba(18,36,27,.55);display:none;align-items:center;justify-content:center;padding:20px;z-index:190;}
+.jrl-modal.is-open{display:flex;}
+.jrl-modal-card{background:var(--jrl-paper);border-radius:20px;max-width:520px;width:100%;padding:28px 30px;position:relative;box-shadow:0 30px 70px rgba(0,0,0,.3);max-height:86vh;overflow:auto;}
+.jrl-modal-card h3{font-size:1.15rem;margin-bottom:10px;}
+.jrl-modal-card p{font-size:.9rem;color:var(--jrl-ink-soft);}
+.jrl-modal-close{position:absolute;right:14px;top:12px;border:0;background:transparent;font-size:1.4rem;color:var(--jrl-muted);line-height:1;}
+.jrl-field{display:block;margin:12px 0;}
+.jrl-field span{display:block;font-size:.8rem;color:var(--jrl-muted);margin-bottom:5px;}
+.jrl-field input,.jrl-field textarea{width:100%;border:1px solid var(--jrl-line);border-radius:10px;padding:9px 12px;font-size:.88rem;background:#fff;color:var(--jrl-ink);outline:0;}
+.jrl-field input:focus,.jrl-field textarea:focus{border-color:var(--jrl-leaf);}
+.jrl-share-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;}
+
+/* 锚点偏移 */
+.jrl-anchor{scroll-margin-top:calc(var(--jrl-head-h) + 12px);}
+
+/* ============ 响应式 ============ */
+@media (max-width:1000px){
+  .jrl-nav{display:none;}
+  .jrl-nav-toggle{display:flex;margin-left:auto;}
+  .jrl-search{min-width:0;flex:1 1 auto;}
+  .jrl-header-inner{flex-wrap:wrap;}
+  .jrl-focus-grid{grid-template-columns:minmax(0,1fr);}
+  .jrl-topic-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .jrl-quote-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .jrl-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media (max-width:720px){
+  :root{--jrl-head-h:124px;}
+  .jrl-section{padding:40px 0;}
+  .jrl-hero-visual img{aspect-ratio:16/10;}
+  .jrl-hero-stats{grid-template-columns:minmax(0,1fr);}
+  .jrl-topic-grid,.jrl-quote-grid,.jrl-board-grid,.jrl-support-grid,.jrl-author-grid,.jrl-essay-figure,.jrl-footer-grid{grid-template-columns:minmax(0,1fr);}
+  .jrl-author{flex-direction:row;}
+  .jrl-partners{grid-template-columns:minmax(0,1fr);}
+  .jrl-hero-visual-caption{padding:14px 16px;}
+  .jrl-announce-track{flex-basis:100%;white-space:normal;}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- ============ S1 公告条 + 页头（吸顶） ============ -->
+<div class="jrl-sticky-shell">
+  <div class="jrl-announce">
+    <div class="jrl-wrap jrl-announce-inner">
+      <span class="jrl-announce-label">官方发布</span>
+      <div class="jrl-announce-track">
+        11月22日新增 <b>《清晨五点半的厨房》</b>、<b>《阳台上的第十五盆香草》</b> 等 6 条高清原创短片；「美好生活提案」第二季报名通道同步开放。
+      </div>
+      <a class="jrl-announce-link" href="#jrl-topics">查看专题进度</a>
+    </div>
+  </div>
+
+  <header class="jrl-header">
+    <div class="jrl-wrap jrl-header-inner">
+      <a class="jrl-brand" href="#jrl-hero" aria-label="今日看料官方网站首页">
+        <span class="jrl-brand-mark" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="9" stroke="#e8b84b" stroke-width="2"/>
+            <path d="M10 8.5 16.5 12 10 15.5Z" fill="#e8b84b"/>
+          </svg>
+        </span>
+        <span class="jrl-brand-text">
+          <span class="jrl-brand-name">今日看料</span>
+          <span class="jrl-brand-slogan">美好生活 · 从今日开始</span>
+        </span>
+      </a>
+
+      <nav class="jrl-nav" aria-label="主导航">
+        <a href="#jrl-hero" class="is-active">首页</a>
+        <a href="#jrl-focus">今日焦点</a>
+        <a href="#jrl-essay">品牌解析</a>
+        <a href="#jrl-topics">专题企划</a>
+        <a href="#jrl-authors">创作者</a>
+        <a href="#jrl-voices">口碑</a>
+        <a href="#jrl-support">帮助</a>
+      </nav>
+
+      <form class="jrl-search" id="jrl-search-form" role="search" onsubmit="return false;">
+        <input type="search" id="jrl-search-input" placeholder="搜索今日看料的生活方式短片" aria-label="站内搜索">
+        <button class="jrl-search-btn" type="submit" aria-label="搜索">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+            <circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21"/>
+          </svg>
+        </button>
+      </form>
+
+      <button class="jrl-nav-toggle" id="jrl-nav-toggle" aria-expanded="false" aria-controls="jrl-mobile-nav" aria-label="展开导航菜单">
+        <svg width="20" height="20" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="jrl-wrap">
+      <div class="jrl-search-feedback" id="jrl-search-feedback" role="status" aria-live="polite"></div>
+      <nav class="jrl-mobile-nav" id="jrl-mobile-nav" aria-label="移动端导航">
+        <a href="#jrl-hero">首页</a>
+        <a href="#jrl-focus">今日焦点</a>
+        <a href="#jrl-essay">品牌解析</a>
+        <a href="#jrl-topics">专题企划</a>
+        <a href="#jrl-authors">创作者</a>
+        <a href="#jrl-voices">口碑</a>
+        <a href="#jrl-support">帮助</a>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<main>
+
+<!-- ============ S2 首屏 ============ -->
+<section class="jrl-anchor" id="jrl-hero" aria-labelledby="jrl-h1">
+  <div class="jrl-wrap jrl-hero">
+    <div class="jrl-hero-head">
+      <span class="jrl-hero-badge"><i></i>今日看料 · 官方网站 · 持续运营中</span>
+      <h1 id="jrl-h1">今日看料</h1>
+      <p class="jrl-hero-lead">一家以「美好生活从今日开始」为信条的生活方式视频品牌。我们用原创高清影像记录厨房的烟火、阳台的绿意、街角的四季，也记录每一位普通人认真生活的模样。</p>
+    </div>
+
+    <div class="jrl-hero-visual">
+      <img
+        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1680 640'%3E%3Cdefs%3E%3ClinearGradient id='sky' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23f3e6c8'/%3E%3Cstop offset='1' stop-color='%23e7cfa4'/%3E%3C/linearGradient%3E%3ClinearGradient id='ground' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%237fa47a'/%3E%3Cstop offset='1' stop-color='%234a7c59'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1680' height='640' fill='url(%23sky)'/%3E%3Ccircle cx='1310' cy='150' r='78' fill='%23e8b84b' opacity='.85'/%3E%3Cpath d='M0 420 Q260 330 520 400 T1040 380 T1680 400 V640 H0Z' fill='url(%23ground)'/%3E%3Cpath d='M0 470 Q300 410 620 470 T1200 450 T1680 470 V640 H0Z' fill='%2333564a' opacity='.55'/%3E%3Cg fill='%231f3a2d' opacity='.82'%3E%3Crect x='250' y='330' width='230' height='150' rx='10'/%3E%3Crect x='272' y='300' width='186' height='34' rx='6'/%3E%3Crect x='300' y='372' width='52' height='46' rx='4' fill='%23f3e6c8' opacity='.7'/%3E%3Crect x='378' y='372' width='52' height='46' rx='4' fill='%23f3e6c8' opacity='.7'/%3E%3C/g%3E%3Cg fill='%23f6f3ea' opacity='.9'%3E%3Crect x='640' y='300' width='14' height='170'/%3E%3Crect x='640' y='300' width='120' height='14'/%3E%3Crect x='700' y='314' width='10' height='70'/%3E%3Cpath d='M700 384h10l-5 26z'/%3E%3C/g%3E%3Cg fill='%234a7c59'%3E%3Ccircle cx='960' cy='420' r='58'/%3E%3Ccircle cx='1024' cy='446' r='42'/%3E%3Crect x='954' y='452' width='14' height='60'/%3E%3C/g%3E%3Cg stroke='%23f6f3ea' stroke-width='7' fill='none' opacity='.9'%3E%3Ccircle cx='1180' cy='330' r='30'/%3E%3Cpath d='M1180 360v90M1180 392l-34 26M1180 392l36 26M1180 378l-26-22M1180 378l28-20'/%3E%3C/g%3E%3C/svg%3E"
+        alt="今日看料品牌主视觉：晨光下的社区院落与绿植小径"
+        width="1680" height="640" loading="eager">
+      <div class="jrl-hero-visual-caption">
+        <div>
+          <h2>今日看料 · 官方年度主视觉《晨光里的院子》</h2>
+          <p>取景于真实社区院落，记录晨光、菜园与邻里问候。我们相信，美好的生活不在远方，就在今天。</p>
+        </div>
+        <a class="jrl-btn jrl-btn--amber" href="#jrl-focus">进入今日焦点</a>
+      </div>
+    </div>
+
+    <dl class="jrl-hero-stats">
+      <div class="jrl-stat">
+        <dt>原创高清短片</dt>
+        <dd data-jrl-count="12860">12,860<small>条</small></dd>
+      </div>
+      <div class="jrl-stat">
+        <dt>实名入驻创作者</dt>
+        <dd data-jrl-count="2437">2,437<small>位</small></dd>
+      </div>
+      <div class="jrl-stat">
+        <dt>月均温暖互动</dt>
+        <dd data-jrl-count="9860000">986<small>万次</small></dd>
+      </div>
+    </dl>
+
+    <div class="jrl-hero-actions">
+      <a class="jrl-btn jrl-btn--primary" href="#jrl-focus">观看今日精选</a>
+      <a class="jrl-btn jrl-btn--ghost" href="#jrl-authors">认识创作者</a>
+      <button class="jrl-btn jrl-btn--ghost" type="button" data-jrl-open="submit">我要投稿</button>
+      <button class="jrl-btn jrl-btn--ghost" type="button" data-jrl-open="share" data-jrl-share-title="今日看料 · 美好生活从今日开始">分享本站</button>
+    </div>
+
+    <div class="jrl-hero-about">
+      <p><strong>企业简介：</strong>今日看料是一个专注美好生活的视频品牌与内容社区，官方网站提供原创高清短片的观看、收藏与投稿服务。平台深耕生活方式垂直领域，围绕厨房、家居、绿植、城市漫步与手作等日常切片，构建由创作者驱动的多元内容生态。我们坚持以真实、温暖、值得信赖的影像标准运营内容，用专业剪辑与正版配乐保证品质，让「美好生活从今日开始」不只是一句口号，而是一套可以跟着做完的生活方式攻略。今日看料，愿做你每天打开的第一扇窗。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S3 今日焦点 视频区 ============ -->
+<section class="jrl-section jrl-anchor" id="jrl-focus" aria-labelledby="jrl-focus-title">
+  <div class="jrl-wrap">
+    <span class="jrl-eyebrow">Today's Focus</span>
+    <h2 class="jrl-section-title" id="jrl-focus-title">今日焦点<span class="jrl-accent">｜</span>把今天过成喜欢的样子</h2>
+    <p class="jrl-section-sub">今日看料编辑部每天从海量投稿中挑出值得停留的几分钟。这里是今日重点推荐，也是一份可以照着做的美好生活攻略。</p>
+
+    <div class="jrl-focus-grid">
+      <article class="jrl-focus-card">
+        <div class="jrl-focus-cover">
+          <span class="jrl-play-badge">▶ 今日头条 · 08:42</span>
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 540'%3E%3Crect width='960' height='540' fill='%23f6f3ea'/%3E%3Crect x='0' y='330' width='960' height='210' fill='%23c9855a' opacity='.35'/%3E%3Crect x='90' y='250' width='330' height='150' rx='10' fill='%2333564a'/%3E%3Crect x='120' y='270' width='120' height='80' rx='6' fill='%23f6f3ea' opacity='.75'/%3E%3Ccircle cx='330' cy='300' r='34' fill='%23e8b84b'/%3E%3Cpath d='M200 250v-60a50 50 0 0 1 100 0v60' stroke='%231f3a2d' stroke-width='10' fill='none'/%3E%3Crect x='520' y='310' width='360' height='90' rx='8' fill='%237fa47a'/%3E%3Ccircle cx='610' cy='290' r='26' fill='%234a7c59'/%3E%3Ccircle cx='680' cy='282' r='20' fill='%234a7c59'/%3E%3Ccircle cx='740' cy='296' r='23' fill='%234a7c59'/%3E%3Crect x='560' y='180' width='280' height='110' rx='8' fill='%23fffdf7' stroke='%23dfd9c8'/%3E%3Cpath d='M580 240h240M580 260h180' stroke='%23dfd9c8' stroke-width='8' stroke-linecap='round'/%3E%3C/svg%3E"
+            alt="今日看料重点短片：清晨五点半的厨房，灶台冒着热气的早餐场景"
+            width="960" height="540" loading="lazy">
+        </div>
+        <div class="jrl-focus-body">
+          <div>
+            <span class="jrl-tag jrl-tag--amber">日常记录</span>
+            <span class="jrl-tag">美食烹饪</span>
+            <span class="jrl-tag jrl-tag--clay">今日看料精选</span>
+          </div>
+          <h3>清晨五点半的厨房：一个人的早餐，也要摆好碗筷</h3>
+          <p>林小满在天还没亮的时候起身，把米淘三遍，把蛋煎到边缘微焦。这条 8 分 42 秒的短片没有配旁白，只有油花声、水声和窗外的鸟叫。她说，一顿认真对待的早餐，是给自己最轻的一句「今天也辛苦了」。</p>
+          <div class="jrl-meta-row">
+            <span>作者：<b>林小满</b></span>
+            <span>播放 128.6 万</span>
+            <span>点赞 <b data-jrl-like-count="4820">4,820</b></span>
+            <span>收藏 3,112</span>
+          </div>
+          <div class="jrl-actions">
+            <button class="jrl-act" type="button" data-jrl-like>♡ 点赞</button>
+            <button class="jrl-act" type="button" data-jrl-save>☆ 收藏</button>
+            <button class="jrl-act" type="button" data-jrl-open="comment">💬 评论</button>
+            <button class="jrl-act" type="button" data-jrl-open="share" data-jrl-share-title="清晨五点半的厨房">↗ 分享</button>
+          </div>
+        </div>
+      </article>
+
+      <div class="jrl-video-list">
+        <article class="jrl-video-item">
+          <span class="jrl-video-index">02 / 城市探索</span>
+          <h3>阳台上的第十五盆香草：在 4 平方米里种出一个菜园</h3>
+          <p>从迷迭香到薄荷，@绿意阿禾 把出租屋的阳台改造成可食花园，附南北朝向光照对照表与浇水节奏。</p>
+          <div class="jrl-video-mini-meta"><span>作者 绿意阿禾</span><span>播放 86.3 万</span><span>点赞 3,206</span></div>
+          <div class="jrl-actions">
+            <button class="jrl-act" type="button" data-jrl-like>♡ 点赞</button>
+            <button class="jrl-act" type="button" data-jrl-save>☆ 收藏</button>
+          </div>
+        </article>
+
+        <article class="jrl-video-item">
+          <span class="jrl-video-index">03 / 经验分享</span>
+          <h3>租房也能好好住：48 小时改造一间 12 平方米卧室</h3>
+          <p>零打孔、可还原、预算 1200 元。@木子收纳研究所 用一块布、三只收纳箱与一盏暖光灯，讲清小空间动线逻辑。</p>
+          <div class="jrl-video-mini-meta"><span>作者 木子收纳研究所</span><span>播放 64.7 万</span><span>点赞 2,894</span></div>
+          <div class="jrl-actions">
+            <button class="jrl-act" type="button" data-jrl-like>♡ 点赞</button>
+            <button class="jrl-act" type="button" data-jrl-save>☆ 收藏</button>
+          </div>
+        </article>
+
+        <article class="jrl-video-item">
+          <span class="jrl-video-index">04 / 人物访谈</span>
+          <h3>对话面包师陈叙：凌晨三点的面团，是一天里最安静的时刻</h3>
+          <p>今日看料品牌访谈第 12 期。陈叙做了九年乡村面包，讲述他如何用一炉面包留住镇上年轻人的早晨。</p>
+          <div class="jrl-video-mini-meta"><span>访谈 今日看料编辑部</span><span>播放 52.1 万</span><span>点赞 2,317</span></div>
+          <div class="jrl-actions">
+            <button class="jrl-act" type="button" data-jrl-like>♡ 点赞</button>
+            <button class="jrl-act" type="button" data-jrl-save>☆ 收藏</button>
+          </div>
+        </article>
+
+        <article class="jrl-video-item">
+          <span class="jrl-video-index">05 / 治愈影像</span>
+          <h3>雨后散步 37 分钟：一条街的四季，都在今天下午</h3>
+          <p>没有台词的环境声短片，收录雨滴、鞋底与自行车铃。@南巷慢走 说这是她给城市留的一份声音日记。</p>
+          <div class="jrl-video-mini-meta"><span>作者 南巷慢走</span><span>播放 41.9 万</span><span>点赞 1,986</span></div>
+          <div class="jrl-actions">
+            <button class="jrl-act" type="button" data-jrl-like>♡ 点赞</button>
+            <button class="jrl-act" type="button" data-jrl-save>☆ 收藏</button>
+          </div>
+        </article>
+
+        <article class="jrl-video-item">
+          <span class="jrl-video-index">06 / 教程干货</span>
+          <h3>手机也能拍生活片：三个稳定运镜与一条呼吸剪辑法</h3>
+          <p>今日看料官方教程更新。从构图、收音到配乐节奏，用一集讲清拍生活短片的入门攻略。</p>
+          <div class="jrl-video-mini-meta"><span>作者 今日看料官方课堂</span><span>播放 38.5 万</span><span>点赞 4,102</span></div>
+          <div class="jrl-actions">
+            <button class="jrl-act" type="button" data-jrl-like>♡ 点赞</button>
+            <button class="jrl-act" type="button" data-jrl-save>☆ 收藏</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 关键词解析（长文） ============ -->
+<section class="jrl-section jrl-anchor" id="jrl-essay" aria-labelledby="jrl-essay-title">
+  <div class="jrl-wrap">
+    <div class="jrl-essay">
+      <span class="jrl-eyebrow">Brand Reading</span>
+      <h2 id="jrl-essay-title">「今日看料」是什么：一份关于美好生活的深度解析</h2>
+      <p class="jrl-essay-lead">从一句口号到一套内容方法，今日看料用长期主义解释「美好生活从今日开始」。</p>
+
+      <div class="jrl-essay-article">
+        <h3>一、「今日看料」四个字，说的是一种内容判断力</h3>
+        <p>很多人第一次听到「今日看料」，会以为这是一档资讯节目或一个每日快讯栏目。但在今日看料的品牌定义里，「料」不是指猎奇的爆料，而是指那些值得被认真看见的生活细节：一锅汤的火候、一次收纳的顺序、一个季节里最合适的散步路线。今日看料做的事情，是替用户完成一次筛选——从每天涌入的海量生活影像中，挑出那些真实、有方法、看完能立刻动手试试的内容。这也是我们做官方网站时始终坚持的第一原则：不追热点堆量，只做能被反复观看的精品内容。</p>
+        <p>这个判断力来自一支由编导、剪辑师、生活方式编辑和社区运营组成的团队。每条进入今日看料首页的片子，都要经过选题会、成片审看与信息核对三道流程；涉及食材、家居与健康的实用内容，还要额外确认数据的来源与适用范围。我们把这种流程称为「看料标准」，它既是企业内部的品质准绳，也是创作者投稿时的公开说明书。对用户来说，这意味着点开任何一个标题，都不必担心浪费十分钟。</p>
+
+        <figure class="jrl-essay-figure">
+          <figure>
+            <img
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 400'%3E%3Crect width='640' height='400' fill='%23eef0e4'/%3E%3Crect x='70' y='90' width='230' height='230' rx='8' fill='%23fffdf7' stroke='%23c9c2ae' stroke-width='4'/%3E%3Crect x='100' y='120' width='170' height='16' rx='8' fill='%234a7c59'/%3E%3Crect x='100' y='152' width='140' height='10' rx='5' fill='%23dfd9c8'/%3E%3Crect x='100' y='176' width='160' height='10' rx='5' fill='%23dfd9c8'/%3E%3Crect x='100' y='200' width='120' height='10' rx='5' fill='%23dfd9c8'/%3E%3Crect x='100' y='240' width='80' height='40' rx='8' fill='%23e8b84b'/%3E%3Ccircle cx='470' cy='170' r='86' fill='%23c9855a' opacity='.55'/%3E%3Cpath d='M400 330h250' stroke='%2333564a' stroke-width='8' stroke-linecap='round'/%3E%3C/svg%3E"
+              alt="今日看料选题会桌面：内容评估表与暖色标记笔"
+              width="640" height="400" loading="lazy">
+            <figcaption>选题评估表上的四栏：真实度、可操作性、信息密度、情绪温度。</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 400'%3E%3Crect width='640' height='400' fill='%23f1e7d6'/%3E%3Crect x='60' y='60' width='520' height='280' rx='14' fill='%2333564a'/%3E%3Crect x='90' y='90' width='460' height='180' rx='8' fill='%23f6f3ea'/%3E%3Cpath d='M300 270l-52-38 52-34z' fill='%23c9855a'/%3E%3Crect x='150' y='120' width='140' height='12' rx='6' fill='%234a7c59'/%3E%3Crect x='150' y='146' width='220' height='8' rx='4' fill='%23c9c2ae'/%3E%3Crect x='150' y='166' width='190' height='8' rx='4' fill='%23c9c2ae'/%3E%3Crect x='120' y='300' width='400' height='16' rx='8' fill='%23e8b84b'/%3E%3C/svg%3E"
+              alt="成片审看界面示意图：播放窗口与下方时间轴彩色标记"
+              width="640" height="400" loading="lazy">
+            <figcaption>成片审看时，时间轴上的彩色标记对应情绪节奏与信息节点。</figcaption>
+          </figure>
+        </figure>
+
+        <h3>二、美好生活从今日开始：我们为什么把「今日」放在最重要的位置</h3>
+        <p>「美好生活」是很多人共同向往的词，但它常常被推到一个模糊的未来：等忙完这阵子、等换了更大的房子、等有了长假。今日看料想反着做——把美好生活拆解成今天就能完成的小动作。我们的内容选题有个内部规则：任何一条片子，观众看完之后至少能做成一件事。也许是煮一碗不粘锅的蛋炒饭，也许是把书桌左侧腾空十厘米，也许是下班路上绕一条有梧桐的街。这些动作很小，但它们共同构成了一种可以持续的生活秩序。</p>
+        <p>因此，今日看料把「今日」放在品牌名的中间，不是修辞，而是方法论。它要求创作者交付的内容具备当下可执行性，也要求平台把内容组织成可以被反复查阅的实用资料，而不是一次性的情绪消费品。这也是我们持续运营官方专题、稳定更新教程板块、并建立口碑与评价体系的原因：我们希望用户在任何一天需要一点生活灵感的时候，都能有一个值得信赖的去处。这种长期积累，正是垂直领域内容品牌最珍贵的资产。</p>
+
+        <h3>三、创作者、社区与内容生态：一个彼此成就的循环</h3>
+        <p>今日看料并不是由编辑部单独完成的品牌，它的内容生态由三个角色共同构成：创作者提供真实的生活样本，编辑部提供标准与结构，社区用户提供反馈与二次创作。三者之间形成的循环非常朴素——创作者因为被认真对待而愿意持续更新，用户因为内容可靠而愿意长期停留，编辑部则把这些真实反馈沉淀为下一条内容的选题线索。我们把这个过程写进了创作者手册，也在官网上公开了部分投稿标准，让更多人能够理解今日看料的尺子长什么样。</p>
+        <p>在社区层面，今日看料更看重互动的质量而不是数量。我们鼓励长评论、鼓励补充自己的做法、鼓励指出内容中可以改进的地方。评论区里常见的一句话是「我照着做了，但是……」——这种带着实践痕迹的反馈，比一百个简单的点赞更能说明一条内容的价值。为了让这种氛围持续下去，平台设置了友善沟通指引与内容纠错通道，任何用户都可以对信息错误进行反馈，编辑部会在核实后更新内容说明。用户至上、持续运营，是今日看料对社区最朴素的承诺。</p>
+
+        <h3>四、从一条短片到一套生活方法：今日看料的内容版图</h3>
+        <p>打开今日看料的官方网站，你会看到一张相对克制的内容版图：日常记录提供情绪与审美，经验分享与教程干货提供方法，深度测评与行业观察提供判断依据，人物访谈与品牌故事提供纵深，城市探索与在地文化提供视野。这几类内容彼此支撑，构成一个完整的观看与学习路径——先被一条短片打动，再被详细攻略留住，最后形成自己的生活方式判断。今日看料相信，真正有影响力的内容不是让人羡慕别人的生活，而是让人愿意动手整理自己的生活。</p>
+        <p>未来，今日看料会继续深耕生活方式这一垂直领域，持续升级高清播放与离线下载体验，完善创作者的收益与成长体系，并围绕二十四节气、城市漫步、家庭厨房等主题推出长期企划。我们希望「今日看料」四个字，最终能成为一种生活态度的代称：认真对待今天，认真对待一餐一饭，认真对待身边的普通人和他们真实的快乐。这就是我们所说的，美好生活从今日开始。</p>
+      </div>
+
+      <div class="jrl-hero-actions" style="justify-content:flex-start;margin-top:22px;">
+        <a class="jrl-btn jrl-btn--primary" href="#jrl-topics">查看品牌专题</a>
+        <a class="jrl-btn jrl-btn--ghost" href="#jrl-authors">认识内容创作者</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S4 专题企划 ============ -->
+<section class="jrl-section jrl-anchor" id="jrl-topics" aria-labelledby="jrl-topics-title">
+  <div class="jrl-wrap">
+    <span class="jrl-eyebrow">Editorial Projects</span>
+    <h2 class="jrl-section-title" id="jrl-topics-title">专题企划<span class="jrl-accent">_</span>今日看料的长期主义</h2>
+    <p class="jrl-section-sub">今日看料每年会围绕少数几个主题持续深耕。它们不是一次性的策划，而是跨越季节、不断生长的内容企划。</p>
+
+    <div class="jrl-topic-grid">
+      <article class="jrl-topic">
+        <div class="jrl-topic-cover">
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23f3e6c8'/%3E%3Crect x='0' y='250' width='640' height='110' fill='%23c9855a' opacity='.5'/%3E%3Ccircle cx='500' cy='90' r='52' fill='%23e8b84b'/%3E%3Crect x='120' y='180' width='180' height='110' rx='8' fill='%2333564a'/%3E%3Crect x='146' y='206' width='128' height='58' rx='5' fill='%23f6f3ea' opacity='.8'/%3E%3Cpath d='M410 290V210a70 70 0 0 1 140 0v80' stroke='%231f3a2d' stroke-width='10' fill='none'/%3E%3Crect x='390' y='290' width='180' height='14' rx='7' fill='%231f3a2d'/%3E%3C/svg%3E"
+            alt="今日看料专题「早餐的秩序」封面：晨光中的厨房窗与灶台剪影"
+            width="640" height="360" loading="lazy">
+        </div>
+        <div class="jrl-topic-body">
+          <span class="jrl-topic-status">更新中 · 已上线 18 期</span>
+          <h3>早餐的秩序</h3>
+          <p>用一年时间，记录三十个家庭如何准备一天的第一餐。从五分钟的快手早餐，到周末的长桌早宴。</p>
+          <ul class="jrl-topic-items">
+            <li>05 期｜五分钟早餐的七种组合</li>
+            <li>12 期｜一个人吃饭也要摆盘的理由</li>
+            <li>18 期｜给孩子准备早餐的动线设计</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="jrl-topic">
+        <div class="jrl-topic-cover">
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23dfe9dd'/%3E%3Crect x='0' y='270' width='640' height='90' fill='%234a7c59'/%3E%3Crect x='60' y='150' width='520' height='120' rx='10' fill='%23fffdf7'/%3E%3Crect x='90' y='180' width='120' height='60' rx='6' fill='%237fa47a'/%3E%3Crect x='230' y='180' width='120' height='60' rx='6' fill='%23e8b84b'/%3E%3Crect x='370' y='180' width='120' height='60' rx='6' fill='%23c9855a'/%3E%3Ccircle cx='150' cy='110' r='30' fill='%234a7c59'/%3E%3Ccircle cx='320' cy='96' r='24' fill='%237fa47a'/%3E%3Ccircle cx='470' cy='112' r='28' fill='%234a7c59'/%3E%3C/svg%3E"
+            alt="今日看料专题「一平方米的春天」封面：窗台上排列的小盆栽与彩色花盆"
+            width="640" height="360" loading="lazy">
+        </div>
+        <div class="jrl-topic-body">
+          <span class="jrl-topic-status">更新中 · 已上线 24 期</span>
+          <h3>一平方米的春天</h3>
+          <p>为没有院子的城市居民准备的可食花园计划。阳台种植、窗台育苗、光照与浇水全攻略。</p>
+          <ul class="jrl-topic-items">
+            <li>07 期｜北向阳台的耐阴香草清单</li>
+            <li>15 期｜出差一周，植物怎么活下来</li>
+            <li>24 期｜从种子到餐桌的九十天记录</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="jrl-topic">
+        <div class="jrl-topic-cover">
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23e6e2d6'/%3E%3Cpath d='M0 300 Q160 240 320 290 T640 280 V360 H0Z' fill='%2333564a'/%3E%3Crect x='80' y='110' width='120' height='160' rx='8' fill='%23c9855a'/%3E%3Crect x='240' y='80' width='150' height='190' rx='8' fill='%234a7c59'/%3E%3Crect x='430' y='130' width='130' height='140' rx='8' fill='%237fa47a'/%3E%3Crect x='100' y='140' width='80' height='40' rx='4' fill='%23f6f3ea' opacity='.8'/%3E%3Crect x='262' y='110' width='106' height='44' rx='4' fill='%23f6f3ea' opacity='.8'/%3E%3Crect x='452' y='160' width='86' height='38' rx='4' fill='%23f6f3ea' opacity='.8'/%3E%3C/svg%3E"
+            alt="今日看料专题「散步者的城市」封面：街道两侧高低错落的建筑剪影"
+            width="640" height="360" loading="lazy">
+        </div>
+        <div class="jrl-topic-body">
+          <span class="jrl-topic-status">开放报名 · 已上线 11 期</span>
+          <h3>散步者的城市</h3>
+          <p>以步行为单位重新认识城市。我们邀请在地创作者带路，用四十分钟走完一条有故事的街。</p>
+          <ul class="jrl-topic-items">
+            <li>03 期｜菜市场里的早市时间表</li>
+            <li>08 期｜梧桐树下的小店与人</li>
+            <li>11 期｜沿河步道的四季对照</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S5 创作者矩阵 ============ -->
+<section class="jrl-section jrl-anchor" id="jrl-authors" aria-labelledby="jrl-authors-title">
+  <div class="jrl-wrap">
+    <span class="jrl-eyebrow">Creators</span>
+    <h2 class="jrl-section-title" id="jrl-authors-title">今日看料的创作者<span class="jrl-accent">｜</span>把生活拍成方法的人</h2>
+    <p class="jrl-section-sub">他们来自不同的城市与职业，共同点是：愿意把日常过得更细致一点，也愿意把方法分享给陌生人。</p>
+
+    <div class="jrl-author-grid">
+      <article class="jrl-author">
+        <div class="jrl-avatar jrl-avatar--a" aria-hidden="true">满</div>
+        <div class="jrl-author-body">
+          <h3>林小满 <span class="jrl-author-role">美食 · 早餐企划主理</span></h3>
+          <div class="jrl-author-nums"><span>作品 <b>186</b></span><span>粉丝 <b>42.7 万</b></span></div>
+          <p>在杭州生活的前餐厅后厨，现为今日看料签约创作者。擅长把复杂的烹饪步骤拆成可执行的小动作，主张「早餐不需要完美，但需要被认真对待」。她的影片常常只有灶火与水声，却让很多人第一次愿意早起十分钟。</p>
+        </div>
+      </article>
+
+      <article class="jrl-author">
+        <div class="jrl-avatar jrl-avatar--b" aria-hidden="true">禾</div>
+        <div class="jrl-author-body">
+          <h3>绿意阿禾 <span class="jrl-author-role">阳台种植 · 植物科普</span></h3>
+          <div class="jrl-author-nums"><span>作品 <b>124</b></span><span>粉丝 <b>31.5 万</b></span></div>
+          <p>城市规划专业出身，租住在朝北的一居室里，却在四平方米阳台种出十五种香草。她的内容以对照实验见长，会认真记录每一盆植物的光照、湿度与失败原因，被社区称为「最不怕展示翻车」的种植博主。</p>
+        </div>
+      </article>
+
+      <article class="jrl-author">
+        <div class="jrl-avatar jrl-avatar--c" aria-hidden="true">木</div>
+        <div class="jrl-author-body">
+          <h3>木子收纳研究所 <span class="jrl-author-role">家居整理 · 小空间动线</span></h3>
+          <div class="jrl-author-nums"><span>作品 <b>203</b></span><span>粉丝 <b>58.2 万</b></span></div>
+          <p>专注租房与小户型整理九年，提出「先动线、后收纳」的思路。她的视频很少出现昂贵家具，更多是一块布、几只箱子和一支笔的重新排列，强调可还原、可负担、可持续的居住改善方式。</p>
+        </div>
+      </article>
+
+      <article class="jrl-author">
+        <div class="jrl-avatar jrl-avatar--d" aria-hidden="true">叙</div>
+        <div class="jrl-author-body">
+          <h3>面包师陈叙 <span class="jrl-author-role">人物访谈 · 乡村面包</span></h3>
+          <div class="jrl-author-nums"><span>作品 <b>67</b></span><span>粉丝 <b>19.8 万</b></span></div>
+          <p>在浙南小镇经营一家乡村面包房，凌晨三点开始揉面。他在今日看料开设的访谈栏目，聊的不是成功学，而是小镇青年的手艺、生活成本与去留选择。语速慢，信息密度高，被观众称为「有面粉味的访谈」。</p>
+        </div>
+      </article>
+
+      <article class="jrl-author">
+        <div class="jrl-avatar jrl-avatar--e" aria-hidden="true">南</div>
+        <div class="jrl-author-body">
+          <h3>南巷慢走 <span class="jrl-author-role">城市探索 · 环境声记录</span></h3>
+          <div class="jrl-author-nums"><span>作品 <b>98</b></span><span>粉丝 <b>27.3 万</b></span></div>
+          <p>声音设计师，习惯用一支录音笔和一台相机记录城市。她的「散步系列」不设旁白，只呈现雨声、车铃与街边人的碎语。她说自己想留住的是城市在某个下午的真实速度，而不是一张好看的明信片。</p>
+        </div>
+      </article>
+
+      <article class="jrl-author">
+        <div class="jrl-avatar jrl-avatar--f" aria-hidden="true">课</div>
+        <div class="jrl-author-body">
+          <h3>今日看料官方课堂 <span class="jrl-author-role">官方出品 · 拍摄与剪辑</span></h3>
+          <div class="jrl-author-nums"><span>作品 <b>312</b></span><span>粉丝 <b>96.4 万</b></span></div>
+          <p>今日看料编辑部的内容教学账号，负责发布官方教程、投稿规范与剪辑模板。课程以「能拍出来」为标准，所有示范片段均可在手机上复现，并配合可下载的素材包与字幕规范，帮助新手完成第一条完整的生活短片。</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S6 口碑 + 榜单 ============ -->
+<section class="jrl-section jrl-anchor" id="jrl-voices" aria-labelledby="jrl-voices-title">
+  <div class="jrl-wrap">
+    <span class="jrl-eyebrow">Community Voices</span>
+    <h2 class="jrl-section-title" id="jrl-voices-title">来自社区的真实评价<span class="jrl-accent">·</span>口碑是一点点攒起来的</h2>
+    <p class="jrl-section-sub">今日看料不做刷量的漂亮数据，更在意用户看完之后有没有真的动手做点什么。以下评价来自不同城市、不同生活阶段的观众。</p>
+
+    <div class="jrl-quote-grid">
+      <blockquote class="jrl-quote">
+        <p>照着「五分钟早餐」那期做了两周，早上不再手忙脚乱。最打动我的是片子里那句「先烧水，再想别的」，感觉生活也是这个顺序。</p>
+        <footer><span class="jrl-quote-dot"></span>阿青 · 上海 · 上班族</footer>
+      </blockquote>
+      <blockquote class="jrl-quote">
+        <p>阳台种植系列是真的有用。北向阳台的耐阴清单我截图存了，薄荷活了三个月，第一次觉得自己不是植物杀手。</p>
+        <footer><span class="jrl-quote-dot"></span>小楼 · 南京 · 租房居住</footer>
+      </blockquote>
+      <blockquote class="jrl-quote">
+        <p>作为两个孩子的妈妈，我最看重信息是不是靠谱。今日看料的健康类内容会标出参考来源，这点在同类平台里很少见，值得信赖。</p>
+        <footer><span class="jrl-quote-dot"></span>静静妈妈 · 成都 · 全职家长</footer>
+      </blockquote>
+      <blockquote class="jrl-quote">
+        <p>我是被《雨后散步 37 分钟》留下来的。整条片子没有一句话，但看完之后我出门走了很久。这种耐心现在太少见了。</p>
+        <footer><span class="jrl-quote-dot"></span>老周 · 武汉 · 退休教师</footer>
+      </blockquote>
+      <blockquote class="jrl-quote">
+        <p>投稿流程比想象中顺，官方课堂给的字幕规范很细。第一次投稿就上线了，编辑还回信指出收音的问题，受教。</p>
+        <footer><span class="jrl-quote-dot"></span>半山 · 厦门 · 自由摄影师</footer>
+      </blockquote>
+      <blockquote class="jrl-quote">
+        <p>小空间收纳那期我反复看了三遍。它没有推销任何收纳产品，只是讲清楚了动线，这种不急着卖东西的内容我愿意长期看。</p>
+        <footer><span class="jrl-quote-dot"></span>木木 · 深圳 · 设计师</footer>
+      </blockquote>
+      <blockquote class="jrl-quote">
+        <p>访谈栏目是我每周的固定节目。陈叙那种慢慢说话的方式，让我想起老家的亲戚，真实、不表演，很有力量。</p>
+        <footer><span class="jrl-quote-dot"></span>阿岚 · 长沙 · 咖啡店主</footer>
+      </blockquote>
+      <blockquote class="jrl-quote">
+        <p>高清画质和字幕都做得很干净，投到电视上看也不糊。家里老人也开始跟着做饭，这是意外收获。</p>
+        <footer><span class="jrl-quote-dot"></span>林先生 · 苏州 · 工程师</footer>
+      </blockquote>
+    </div>
+
+    <div style="margin-top:36px;">
+      <h3 style="font-size:1.15rem;margin-bottom:18px;">今日看料 · 本周内容数据榜</h3>
+      <div class="jrl-board-grid">
+        <div class="jrl-board">
+          <h3>热度榜 <span>本周</span></h3>
+          <ul>
+            <li><span class="jrl-rank jrl-rank--top">1</span><span class="jrl-board-name">清晨五点半的厨房<small>林小满 · 日常记录</small></span><span class="jrl-board-val">128.6 万</span></li>
+            <li><span class="jrl-rank jrl-rank--top">2</span><span class="jrl-board-name">阳台上的第十五盆香草<small>绿意阿禾 · 植物种植</small></span><span class="jrl-board-val">86.3 万</span></li>
+            <li><span class="jrl-rank">3</span><span class="jrl-board-name">租房也能好好住<small>木子收纳研究所 · 收纳</small></span><span class="jrl-board-val">64.7 万</span></li>
+            <li><span class="jrl-rank">4</span><span class="jrl-board-name">对话面包师陈叙<small>今日看料编辑部 · 访谈</small></span><span class="jrl-board-val">52.1 万</span></li>
+            <li><span class="jrl-rank">5</span><span class="jrl-board-name">雨后散步 37 分钟<small>南巷慢走 · 治愈影像</small></span><span class="jrl-board-val">41.9 万</span></li>
+          </ul>
+        </div>
+        <div class="jrl-board">
+          <h3>新人榜 <span>本月</span></h3>
+          <ul>
+            <li><span class="jrl-rank jrl-rank--top">1</span><span class="jrl-board-name">窗台的四季<small>新人 · 关注 3.2 万</small></span><span class="jrl-board-val">+218%</span></li>
+            <li><span class="jrl-rank jrl-rank--top">2</span><span class="jrl-board-name">一锅到底<small>新人 · 关注 2.7 万</small></span><span class="jrl-board-val">+186%</span></li>
+            <li><span class="jrl-rank">3</span><span class="jrl-board-name">旧物的第二次生命<small>新人 · 关注 2.1 万</small></span><span class="jrl-board-val">+152%</span></li>
+            <li><span class="jrl-rank">4</span><span class="jrl-board-name">早起散步会<small>新人 · 关注 1.8 万</small></span><span class="jrl-board-val">+134%</span></li>
+            <li><span class="jrl-rank">5</span><span class="jrl-board-name">小阳台大作战<small>新人 · 关注 1.5 万</small></span><span class="jrl-board-val">+117%</span></li>
+          </ul>
+        </div>
+        <div class="jrl-board">
+          <h3>口碑榜 <span>近 30 天</span></h3>
+          <ul>
+            <li><span class="jrl-rank jrl-rank--top">1</span><span class="jrl-board-name">今日看料官方课堂<small>好评率 98.6% · 教程</small></span><span class="jrl-board-val">4.96</span></li>
+            <li><span class="jrl-rank jrl-rank--top">2</span><span class="jrl-board-name">林小满<small>好评率 97.9% · 美食</small></span><span class="jrl-board-val">4.93</span></li>
+            <li><span class="jrl-rank">3</span><span class="jrl-board-name">木子收纳研究所<small>好评率 97.2% · 收纳</small></span><span class="jrl-board-val">4.91</span></li>
+            <li><span class="jrl-rank">4</span><span class="jrl-board-name">南巷慢走<small>好评率 96.8% · 影像</small></span><span class="jrl-board-val">4.89</span></li>
+            <li><span class="jrl-rank">5</span><span class="jrl-board-name">绿意阿禾<small>好评率 96.4% · 植物</small></span><span class="jrl-board-val">4.87</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S7 辅助区：企业动态 + 合作伙伴 + FAQ + 投稿 ============ -->
+<section class="jrl-section jrl-anchor" id="jrl-support" aria-labelledby="jrl-support-title">
+  <div class="jrl-wrap">
+    <span class="jrl-eyebrow">Support &amp; Updates</span>
+    <h2 class="jrl-section-title" id="jrl-support-title">企业动态 <span class="jrl-accent">|</span> 合作与帮助</h2>
+    <p class="jrl-section-sub">今日看料的官方发布、合作伙伴与常见问题都在这里。遇到问题，也可以直接通过投稿入口联系我们。</p>
+
+    <div class="jrl-support-grid">
+      <div class="jrl-panel">
+        <h2>企业动态与内容更新</h2>
+        <p class="jrl-panel-sub">官方发布 · 持续运营中</p>
+        <ul class="jrl-news">
+          <li><time datetime="2026-11-22">11-22</time><span>「美好生活提案」第二季开放报名，面向全国创作者征集二十四节气主题短片，投稿入口已上线。</span></li>
+          <li><time datetime="2026-11-18">11-18</time><span>今日看料官方网站高清播放器升级，支持 1080P 自适应与离线缓存，移动端加载更稳定。</span></li>
+          <li><time datetime="2026-11-12">11-12</time><span>「一平方米的春天」专题更新至第 24 期，同步发布阳台种植光照对照表下载包。</span></li>
+          <li><time datetime="2026-11-05">11-05</time><span>今日看料与三家城市书店达成内容合作，共同推出「散步者的城市」线下观影＋对谈活动。</span></li>
+          <li><time datetime="2026-10-29">10-29</time><span>创作者收益体系更新：新增长尾精品内容的季度扶持计划，规则详见创作者手册。</span></li>
+        </ul>
+      </div>
+
+      <div class="jrl-panel">
+        <h2>合作品牌与伙伴</h2>
+        <p class="jrl-panel-sub">共同推动美好生活内容的长期伙伴。</p>
+        <div class="jrl-partners">
+          <div class="jrl-partner">山野农产 · 食材溯源</div>
+          <div class="jrl-partner">木几家居 · 小空间方案</div>
+          <div class="jrl-partner">拾光书店 · 城市文化</div>
+          <div class="jrl-partner">缓声唱片 · 正版配乐</div>
+          <div class="jrl-partner">青禾器物 · 手作器皿</div>
+          <div class="jrl-partner">慢行户外 · 城市徒步</div>
+        </div>
+        <p style="font-size:.82rem;color:var(--jrl-muted);margin-top:16px;">今日看料只与理念一致、产品可追溯的品牌合作，所有商业内容均明确标注。</p>
+      </div>
+    </div>
+
+    <div class="jrl-panel" style="margin-top:22px;">
+      <h2>常见问题</h2>
+      <p class="jrl-panel-sub">关于观看、投稿、版权与合作的常见疑问。</p>
+      <div class="jrl-faq">
+        <details>
+          <summary>今日看料的视频可以免费观看吗？</summary>
+          <p>可以。今日看料官方网站的绝大部分原创内容免费开放观看，支持高清播放与离线缓存。部分特别企划的长片会提供会员抢先看，但不会影响基础内容的完整性。</p>
+        </details>
+        <details>
+          <summary>我想投稿自己的生活方式短片，需要什么条件？</summary>
+          <p>年满十八周岁、拥有作品完整版权即可投稿。建议画面稳定、收音清楚、内容具备可执行的方法或真实的生活观察。投稿时请附上标题、简介、拍摄地点与素材来源说明，编辑部通常在七个工作日内回复。</p>
+        </details>
+        <details>
+          <summary>投稿之后版权归谁？</summary>
+          <p>作品版权始终归创作者所有。今日看料获得的仅是在官方网站与官方账号上进行展示、推荐与宣传的非独占授权，创作者可随时在其他平台发布同一作品。</p>
+        </details>
+        <details>
+          <summary>平台如何保证内容的真实性？</summary>
+          <p>所有涉及食材、家居、健康的实用内容，编辑会核对信息来源；标注「实测」的片段需提供拍摄原始素材。用户如发现信息错误，可通过页面反馈入口提交，核实后我们会更新内容说明。</p>
+        </details>
+        <details>
+          <summary>可以在今日看料下载视频素材吗？</summary>
+          <p>官方课堂提供的教学素材包可以免费下载使用，仅限学习与个人创作。正片内容不提供原片下载，如需商用授权，请通过合作入口联系我们。</p>
+        </details>
+        <details>
+          <summary>品牌合作与内容共创怎么联系？</summary>
+          <p>我们欢迎与生活方式相关的品牌进行内容共创。请在投稿入口选择「品牌合作」类型，附上品牌介绍与初步想法，商务团队会在三个工作日内与您沟通。</p>
+        </details>
+        <details>
+          <summary>为什么有些内容会更新说明？</summary>
+          <p>生活方式内容常常依赖具体环境，比如气候、朝向与器具差异。当创作者或用户补充了更准确的信息，编辑会以「内容更新」的方式附在片尾，保证内容长期可用。</p>
+        </details>
+      </div>
+    </div>
+
+    <div class="jrl-submit-card">
+      <div>
+        <h2>把你的今天，投给今日看料</h2>
+        <p>我们长期征集日常记录、经验分享、教程干货与城市探索类短片。原创、真实、可执行，是我们唯一的标准。美好生活，从今天开始。</p>
+      </div>
+      <div class="jrl-actions" style="margin-top:0;">
+        <button class="jrl-btn jrl-btn--amber" type="button" data-jrl-open="submit">立即投稿</button>
+        <button class="jrl-btn jrl-btn--ghost" style="border-color:#f0ebdb;color:#f0ebdb;" type="button" data-jrl-open="share" data-jrl-share-title="今日看料官方网站">分享给朋友</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ S8 页脚 ============ -->
+<footer class="jrl-footer">
+  <div class="jrl-wrap">
+    <div class="jrl-footer-grid">
+      <div>
+        <div class="jrl-footer-brand">
+          <span class="jrl-brand-mark" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="9" stroke="#e8b84b" stroke-width="2"/>
+              <path d="M10 8.5 16.5 12 10 15.5Z" fill="#e8b84b"/>
+            </svg>
+          </span>
+          <span class="jrl-brand-text">
+            <span class="jrl-brand-name" style="color:#f2eddd;">今日看料</span>
+            <span class="jrl-brand-slogan" style="color:rgba(217,211,194,.6);">美好生活 · 从今日开始</span>
+          </span>
+        </div>
+        <p>今日看料官方网站，专注美好生活的视频品牌。我们以原创高清影像记录真实日常，以专业标准运营内容生态，与创作者一同陪伴每一位认真生活的人。</p>
+      </div>
+      <div>
+        <h3>内容导航</h3>
+        <ul>
+          <li><a href="#jrl-focus">今日焦点</a></li>
+          <li><a href="#jrl-essay">品牌解析</a></li>
+          <li><a href="#jrl-topics">专题企划</a></li>
+          <li><a href="#jrl-authors">创作者矩阵</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>参与方式</h3>
+        <ul>
+          <li><a href="#jrl-support">投稿入口</a></li>
+          <li><a href="#jrl-support">品牌合作</a></li>
+          <li><a href="#jrl-voices">社区口碑</a></li>
+          <li><a href="#jrl-support">常见问题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>联系我们</h3>
+        <ul>
+          <li>内容合作：brand@jinrikanliao.example</li>
+          <li>投稿咨询：creator@jinrikanliao.example</li>
+          <li>纠错反馈：fix@jinrikanliao.example</li>
+          <li>工作时间：周一至周五 10:00–19:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="jrl-footer-bottom">
+      <span>© 2026 今日看料官方网站 · 版权所有 · 持续运营中</span>
+      <span>原创内容受版权保护 · 未经授权禁止转载 · 备案号：美好生活备 20260118 号</span>
+    </div>
+  </div>
+</footer>
+
+<button class="jrl-top" id="jrl-top" type="button" aria-label="回到顶部">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 19V5M5 12l7-7 7 7"/>
+  </svg>
+</button>
+
+<div class="jrl-toast" id="jrl-toast" role="status" aria-live="polite"></div>
+
+<!-- 评论弹窗 -->
+<div class="jrl-modal" id="jrl-modal-comment" aria-hidden="true">
+  <div class="jrl-modal-card" role="dialog" aria-modal="true" aria-labelledby="jrl-modal-comment-title">
+    <button class="jrl-modal-close" type="button" data-jrl-close aria-label="关闭">×</button>
+    <h3 id="jrl-modal-comment-title">写下你的今日看料</h3>
+    <p>友善、具体、带着自己的实践更好。你的评论会在审核后展示。</p>
+    <form id="jrl-comment-form">
+      <label class="jrl-field"><span>昵称</span><input type="text" name="nick" placeholder="给自己起个名字" required></label>
+      <label class="jrl-field"><span>评论内容</span><textarea name="text" rows="4" placeholder="说说你看完这条短片的想法，或你自己的生活小方法" required></textarea></label>
+      <button class="jrl-btn jrl-btn--primary" type="submit">提交评论</button>
+    </form>
+  </div>
+</div>
+
+<!-- 投稿弹窗 -->
+<div class="jrl-modal" id="jrl-modal-submit" aria-hidden="true">
+  <div class="jrl-modal-card" role="dialog" aria-modal="true" aria-labelledby="jrl-modal-submit-title">
+    <button class="jrl-modal-close" type="button" data-jrl-close aria-label="关闭">×</button>
+    <h3 id="jrl-modal-submit-title">向今日看料投稿</h3>
+    <p>请留下作品信息，编辑部会在七个工作日内回复。原创、真实、可执行，是我们的标准。</p>
+    <form id="jrl-submit-form">
+      <label class="jrl-field"><span>创作者昵称</span><input type="text" name="author" placeholder="你的昵称" required></label>
+      <label class="jrl-field"><span>作品标题</span><input type="text" name="title" placeholder="例如：清晨五点半的厨房" required></label>
+      <label class="jrl-field"><span>作品简介</span><textarea name="desc" rows="3" placeholder="用一句话说清这条片子的内容与亮点" required></textarea></label>
+      <label class="jrl-field"><span>联系方式</span><input type="text" name="contact" placeholder="邮箱或其他联系方式" required></label>
+      <button class="jrl-btn jrl-btn--primary" type="submit">提交投稿</button>
+    </form>
+  </div>
+</div>
+
+<!-- 分享弹窗 -->
+<div class="jrl-modal" id="jrl-modal-share" aria-hidden="true">
+  <div class="jrl-modal-card" role="dialog" aria-modal="true" aria-labelledby="jrl-modal-share-title">
+    <button class="jrl-modal-close" type="button" data-jrl-close aria-label="关闭">×</button>
+    <h3 id="jrl-modal-share-title">分享今日看料</h3>
+    <p id="jrl-share-text">把「美好生活从今日开始」分享给朋友。</p>
+    <div class="jrl-share-row">
+      <button class="jrl-btn jrl-btn--primary" type="button" data-jrl-copy>复制页面链接</button>
+      <button class="jrl-btn jrl-btn--ghost" type="button" data-jrl-share-tip="微信">微信</button>
+      <button class="jrl-btn jrl-btn--ghost" type="button" data-jrl-share-tip="微博">微博</button>
+      <button class="jrl-btn jrl-btn--ghost" type="button" data-jrl-share-tip="QQ">QQ</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById('jrl-toast');
+  var toastTimer = null;
+  function showToast(msg){
+    if(!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('is-show'); }, 2200);
+  }
+
+  /* ---------- 移动端导航 ---------- */
+  var navToggle = document.getElementById('jrl-nav-toggle');
+  var mobileNav = document.getElementById('jrl-mobile-nav');
+  if(navToggle && mobileNav){
+    navToggle.addEventListener('click', function(){
+      var open = mobileNav.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      navToggle.setAttribute('aria-label', open ? '收起导航菜单' : '展开导航菜单');
+    });
+    mobileNav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        mobileNav.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  /* ---------- 搜索反馈 ---------- */
+  var searchForm = document.getElementById('jrl-search-form');
+  var searchInput = document.getElementById('jrl-search-input');
+  var searchFeedback = document.getElementById('jrl-search-feedback');
+  var searchMap = [
+    {keys:['早餐','厨房','美食','做饭','烹饪'], tip:'找到 3 条相关内容：清晨五点半的厨房、五分钟早餐的七种组合、给孩子准备早餐的动线设计'},
+    {keys:['植物','阳台','香草','种植','绿'], tip:'找到 3 条相关内容：阳台上的第十五盆香草、北向阳台的耐阴香草清单、从种子到餐桌的九十天'},
+    {keys:['收纳','整理','租房','家居','空间'], tip:'找到 3 条相关内容：租房也能好好住、小空间动线逻辑、零打孔改造清单'},
+    {keys:['散步','城市','街','声音','漫步'], tip:'找到 3 条相关内容：雨后散步 37 分钟、散步者的城市、菜市场里的早市时间表'},
+    {keys:['访谈','面包','人物','手艺'], tip:'找到 2 条相关内容：对话面包师陈叙、小镇手艺人的去留选择'},
+    {keys:['教程','拍摄','剪辑','运镜','投稿'], tip:'找到 2 条相关内容：手机也能拍生活片、今日看料投稿规范与字幕标准'}
+  ];
+  if(searchForm && searchInput && searchFeedback){
+    searchForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var q = searchInput.value.trim();
+      if(!q){
+        searchFeedback.textContent = '请输入关键词，例如「早餐」「阳台」「散步」「剪辑」。';
+        return;
+      }
+      var hit = null;
+      for(var i=0;i<searchMap.length;i++){
+        for(var j=0;j<searchMap[i].keys.length;j++){
+          if(q.indexOf(searchMap[i].keys[j]) !== -1){ hit = searchMap[i]; break; }
+        }
+        if(hit) break;
+      }
+      if(hit){
+        searchFeedback.textContent = '「' + q + '」' + hit.tip;
+        showToast('已为你筛选相关内容');
+      }else{
+        searchFeedback.textContent = '「' + q + '」暂无直接匹配，试试「早餐」「阳台」「收纳」「散步」等今日看料热门主题。';
+      }
+    });
+    searchInput.addEventListener('input', function(){
+      if(!searchInput.value.trim()) searchFeedback.textContent = '';
+    });
+  }
+
+  /* ---------- 点赞与收藏 ---------- */
+  var likeBtns = document.querySelectorAll('[data-jrl-like]');
+  Array.prototype.forEach.call(likeBtns, function(btn){
+    var item = btn.closest('.jrl-focus-body, .jrl-video-item');
+    var countEl = item ? item.querySelector('[data-jrl-like-count]') : null;
+    btn.addEventListener('click', function(){
+      var on = btn.classList.toggle('is-liked');
+      if(countEl){
+        var n = parseInt(countEl.getAttribute('data-jrl-like-count') || countEl.textContent.replace(/[^\d]/g,''), 10) || 0;
+        n = on ? n + 1 : Math.max(0, n - 1);
+        countEl.setAttribute('data-jrl-like-count', n);
+        countEl.textContent = n.toLocaleString('en-US');
+      }
+      btn.textContent = on ? '♥ 已点赞' : '♡ 点赞';
+      showToast(on ? '已点赞，感谢你的喜欢' : '已取消点赞');
+    });
+  });
+
+  var saveBtns = document.querySelectorAll('[data-jrl-save]');
+  Array.prototype.forEach.call(saveBtns, function(btn){
+    btn.addEventListener('click', function(){
+      var on = btn.classList.toggle('is-saved');
+      btn.textContent = on ? '★ 已收藏' : '☆ 收藏';
+      showToast(on ? '已收藏，可在个人中心查看' : '已取消收藏');
+    });
+  });
+
+  /* ---------- 弹窗控制 ---------- */
+  var modals = {
+    comment: document.getElementById('jrl-modal-comment'),
+    submit: document.getElementById('jrl-modal-submit'),
+    share: document.getElementById('jrl-modal-share')
+  };
+  function openModal(name, shareTitle){
+    var m = modals[name];
+    if(!m) return;
+    if(name === 'share'){
+      var text = document.getElementById('jrl-share-text');
+      if(text){
+        text.textContent = shareTitle
+          ? '即将分享「' + shareTitle + '」—— 美好生活从今日开始。'
+          : '把「美好生活从今日开始」分享给朋友。';
+      }
+    }
+    m.classList.add('is-open');
+    m.setAttribute('aria-hidden','false');
+    var closeBtn = m.querySelector('[data-jrl-close]');
+    if(closeBtn) closeBtn.focus();
+  }
+  function closeModal(m){
+    if(!m) return;
+    m.classList.remove('is-open');
+    m.setAttribute('aria-hidden','true');
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('[data-jrl-open]'), function(btn){
+    btn.addEventListener('click', function(){
+      openModal(btn.getAttribute('data-jrl-open'), btn.getAttribute('data-jrl-share-title'));
+    });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-jrl-close]'), function(btn){
+    btn.addEventListener('click', function(){ closeModal(btn.closest('.jrl-modal')); });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('.jrl-modal'), function(m){
+    m.addEventListener('click', function(e){ if(e.target === m) closeModal(m); });
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+      Array.prototype.forEach.call(document.querySelectorAll('.jrl-modal.is-open'), function(m){ closeModal(m); });
+    }
+  });
+
+  /* ---------- 复制链接 / 分享提示 ---------- */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-jrl-copy]'), function(btn){
+    btn.addEventListener('click', function(){
+      var link = window.location.href;
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(link).then(function(){ showToast('页面链接已复制'); })
+          .catch(function(){ showToast('复制失败，请手动复制地址栏链接'); });
+      }else{
+        showToast('请手动复制地址栏链接分享');
+      }
+    });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-jrl-share-tip]'), function(btn){
+    btn.addEventListener('click', function(){
+      var name = btn.getAttribute('data-jrl-share-tip');
+      showToast('已生成' + name + '分享卡片，请粘贴给好友');
+    });
+  });
+
+  /* ---------- 表单提交 ---------- */
+  var commentForm = document.getElementById('jrl-comment-form');
+  if(commentForm){
+    commentForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      closeModal(modals.comment);
+      commentForm.reset();
+      showToast('评论已提交，审核通过后展示');
+    });
+  }
+  var submitForm = document.getElementById('jrl-submit-form');
+  if(submitForm){
+    submitForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      closeModal(modals.submit);
+      submitForm.reset();
+      showToast('投稿已收到，编辑部将在七个工作日内回复');
+    });
+  }
+
+  /* ---------- 回到顶部 ---------- */
+  var topBtn = document.getElementById('jrl-top');
+  if(topBtn){
+    topBtn.addEventListener('click', function(){
+      window.scrollTo({ top:0, behavior:'smooth' });
+    });
+    window.addEventListener('scroll', function(){
+      if(window.scrollY > 520) topBtn.classList.add('is-show');
+      else topBtn.classList.remove('is-show');
+    }, { passive:true });
+  }
+})();
+</script>
+</body>
+  </html>
